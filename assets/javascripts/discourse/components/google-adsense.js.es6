@@ -241,7 +241,7 @@ export default AdComponent.extend({
   showAd(showToTrustLevel, showToGroups, showAfterPost) {
     return (
       this.siteSettings.adsense_publisher_code &&
-      !(topic.id.in?([1152036,1111543,701371,491228,538734,326155,1144404])) &&
+      this.get("topic.id") != 1144404 &&
       showToTrustLevel &&
       showToGroups &&
       showAfterPost
