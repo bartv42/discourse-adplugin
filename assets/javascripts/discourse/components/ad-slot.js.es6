@@ -70,7 +70,12 @@ export default AdComponent.extend({
    */
   @computed("placement", "postNumber")
   availableAdTypes(placement, postNumber) {
+  
     let types = [];
+
+      if topic.get('id') == 1144404 {
+        return( types );
+    }  
     const houseAds = this.site.get("house_creatives"),
       placeUnderscored = placement.replace(/-/g, "_");
 
