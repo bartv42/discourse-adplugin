@@ -73,7 +73,10 @@ export default AdComponent.extend({
   
     let types = [];
 
-      if topic.get('id') == 1144404 {
+    console.log(" Topic ID: " );
+    console.log( topic.get('id') );
+  
+    if ( topic.get('id') == 1144404 ) {
         return( types );
     }  
     const houseAds = this.site.get("house_creatives"),
