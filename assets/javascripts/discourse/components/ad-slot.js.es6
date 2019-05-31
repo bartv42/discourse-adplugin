@@ -73,6 +73,26 @@ export default AdComponent.extend({
   
     let types = [];
 
+  
+    /* block certain page ID's from adsense */
+    var url = window.location.href;
+
+    if( url.indexOf("/t/") > -1) {
+      var parameters = url.split("/");
+      var topic_id = parseInt(parameters[5]);
+
+      var blockedIDs = [11,12,13];
+
+      console.log('ID:' + topic_id);
+
+      if( blockedIDs.includes(topic_id)){
+        console.log('no ads');
+        return types;
+      }
+
+    }
+  
+  
     const houseAds = this.site.get("house_creatives"),
       placeUnderscored = placement.replace(/-/g, "_");
 
