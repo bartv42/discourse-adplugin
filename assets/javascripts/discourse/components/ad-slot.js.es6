@@ -73,12 +73,6 @@ export default AdComponent.extend({
   
     let types = [];
 
-    console.log(" Topic ID: " );
-    console.log( topic.get('id') );
-  
-    if ( topic.get('id') == 1144404 ) {
-        return( types );
-    }  
     const houseAds = this.site.get("house_creatives"),
       placeUnderscored = placement.replace(/-/g, "_");
 
