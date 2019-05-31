@@ -81,7 +81,7 @@ export default AdComponent.extend({
       var parameters = url.split("/");
       var topic_id = parseInt(parameters[5]);
 
-      var blockedIDs = [1152036,1111543,701371,491228,538734,326155];
+      var blockedIDs = [1152036,1111543,701371,491228,538734,326155,529413];
       console.log('ID:' + topic_id);
 
       if( blockedIDs.includes(topic_id)){
